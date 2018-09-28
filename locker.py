@@ -13,7 +13,7 @@ class User:
             email:New email address
             password:New password
         '''
-        self.user_name = username
+        self.user_name = user_name
         self.account_name = account_name
         self.email = email
         self.password = password

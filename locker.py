@@ -3,6 +3,8 @@ class User:
     class for passing all instances of the user
     '''
 
+    user_list = []
+
     def __init__(self,user_name,account_name,email,password):
         '''
         initiates properties of my objects
@@ -17,6 +19,15 @@ class User:
         self.account_name = account_name
         self.email = email
         self.password = password
+
+    def save_user(self):
+        '''
+        save_contact method saves contact objects into contact_list
+        '''
+
+        User.user_list.append(self)
+
+
 
 
 

@@ -44,7 +44,7 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user.save_user()
         test_user = User("Roman","Facebook","@roman.com","reigns18")
-        test_user = save_user()
+        test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
 if __name__ == '__main__':

@@ -5,11 +5,13 @@ class Credential:
 
     user_list = []
 
-    def delete_user(self):
+    def __init__(self,account_name,email,password):
         '''
-        delete_user method delete a saved user from user_list
+
         '''
-        Credential.user_list.remove(self)
+        self.account_name = account_name
+        self.email = email
+        self.password = password
 
     @classmethod
     def find_by_account_name(cls,account_name):

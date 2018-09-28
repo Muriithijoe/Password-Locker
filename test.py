@@ -14,7 +14,7 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("Joe","Instagram","@joe.com","killshot18")
+        self.new_user = User("Joe")
 
     def tearDown(self):
         '''
@@ -28,9 +28,9 @@ class TestUser(unittest.TestCase):
         '''
 
         self.assertEqual(self.new_user.user_name,"Joe")
-        self.assertEqual(self.new_user.account_name,"Instagram")
-        self.assertEqual(self.new_user.email,"@joe.com")
-        self.assertEqual(self.new_user.password,"killshot18")
+        # self.assertEqual(self.new_user.account_name,"Instagram")
+        # self.assertEqual(self.new_user.email,"@joe.com")
+        # self.assertEqual(self.new_user.password,"killshot18")
 
     def test_save_user(self):
         '''
@@ -44,7 +44,7 @@ class TestUser(unittest.TestCase):
         test_save_multiple_user to check if we can save multiple users object to our lists
         '''
         self.new_user.save_user()
-        test_user = User("Roman","Facebook","@roman.com","reigns18")
+        test_user = User("Roman")
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
@@ -53,18 +53,18 @@ class TestUser(unittest.TestCase):
         test_delete_contact to test if we can remove a contact from our contact list
         '''
         self.new_user.save_user()
-        test_user = Credential("Roman","Facebook","@roman.com","reigns18")
+        test_user = User("Roman")
         test_user.save_user()
 
         self.new_user.delete_user()
-        self.assertEqual(len(Credential.user_list),1)
+        self.assertEqual(len(User.user_list),1)
 
     def test_find_user_by_account_name(self):
         '''
         test to check if we can find user by account name and display information
         '''
         self.new_user.save_user()
-        test_user = User("Roman","Facebook","@roman.com","reigns18")
+        test_user = User("Roman")
         test_user.save_user()
 
         found_user = Credential.find_by_account_name("Facebook")
@@ -75,7 +75,7 @@ class TestUser(unittest.TestCase):
         test to check if we can return a boolean if cannot find the contact.
         '''
         self.new_user.save_user()
-        test_user = User("Roman","Facebook","@roman.com","reigns18")
+        test_user = User("Roman")
         test_user.save_user()
 
         user_exists = Credential.user_exist("Facebook")

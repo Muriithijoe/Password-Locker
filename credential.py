@@ -7,7 +7,7 @@ class Credential:
 
     def __init__(self,account_name,email,password):
         '''
-
+       
         '''
         self.account_name = account_name
         self.email = email

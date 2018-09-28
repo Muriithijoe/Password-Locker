@@ -1,5 +1,6 @@
 import unittest
 from locker import User
+from credential import Credential
 
 class TestUser(unittest.TestCase):
     '''
@@ -52,11 +53,11 @@ class TestUser(unittest.TestCase):
         test_delete_contact to test if we can remove a contact from our contact list
         '''
         self.new_user.save_user()
-        test_user = User("Roman","Facebook","@roman.com","reigns18")
+        test_user = Credential("Roman","Facebook","@roman.com","reigns18")
         test_user.save_user()
 
         self.new_user.delete_user()
-        self.assertEqual(len(User.user_list),1)
+        self.assertEqual(len(Credential.user_list),1)
 
     def test_find_user_by_account_name(self):
         '''
@@ -66,7 +67,7 @@ class TestUser(unittest.TestCase):
         test_user = User("Roman","Facebook","@roman.com","reigns18")
         test_user.save_user()
 
-        found_user = User.find_by_account_name("Facebook")
+        found_user = Credential.find_by_account_name("Facebook")
         self.assertEqual(found_user.user_name,test_user.user_name)
 
     def test_user_exists(self):
@@ -77,14 +78,14 @@ class TestUser(unittest.TestCase):
         test_user = User("Roman","Facebook","@roman.com","reigns18")
         test_user.save_user()
 
-        user_exists = User.user_exist("Facebook")
+        user_exists = Credential.user_exist("Facebook")
         self.assertTrue(user_exists)
 
     def test_display_all_users(self):
         '''
         method that returns a list of all contacts saved
         '''
-        self.assertEqual(User.display_users(),User.user_list)
+        self.assertEqual(Credential.display_users(),Credential.user_list)
 
 
 

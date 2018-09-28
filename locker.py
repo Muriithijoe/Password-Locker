@@ -48,6 +48,22 @@ class User:
             if user.account_name == account_name :
                 return user
 
+    @classmethod
+    def user_exist(cls,account_name):
+        '''
+        Method that checks if a contact exists from contact lists.
+        Args:
+            number: account name to search if it exists
+        Returns:
+            Boolean: True or False depending if the contact exists
+        '''
+        for user in cls.user_list:
+            if user.account_name == account_name:
+                return True
+
+        return False
+
+
 
 
 

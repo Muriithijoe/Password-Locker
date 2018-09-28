@@ -80,6 +80,12 @@ class TestUser(unittest.TestCase):
         user_exists = User.user_exist("Facebook")
         self.assertTrue(user_exists)
 
+    def test_display_all_users(self):
+        '''
+        method that returns a list of all contacts saved
+        '''
+        self.assertEqual(User.display_users(),User.user_list)
+
 
 
 if __name__ == '__main__':

@@ -41,7 +41,7 @@ def display_user():
     return User.display_user()
 
 def main():
-    print("Hello Welcome to your Password. What is your name ? ")
+    print("Hello Welcome to your Password-Locker. What is your name ? ")
     user_name =input()
     print(f"Hello {user_name}.what would you like to do ?")
     print('\n')
@@ -90,10 +90,11 @@ def main():
             print("Enter the where Account is")
             search_acccout_name = input()
             if check_existing_user(search_acccout_name):
-                print(f"{search_user.user_name}")
+                search_acccout_name = find_user(search_acccout_name)
+                print(f"{search_acccout_name.user_name}")
                 print('-' * 20)
-                print(f"{search_user.account_name}")
-                print(f"{search_user.password}")
+                print(f"{search_acccout_name.account_name}")
+                print(f"{search_acccout_name.password}")
             else:
                 print("That User does not exist")
 

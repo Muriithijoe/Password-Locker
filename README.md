@@ -10,6 +10,12 @@ This is an application that you can store your passwords and generate new passwo
 
 **Set-up and installation**
 
+~Clone my github repo
+
+~Download python 3.6 if you do not have it.
+
+~run chmod + ./run.py on your terminal.
+
 **Technologies used**
 
 I used python 3.6 in the making of this application.

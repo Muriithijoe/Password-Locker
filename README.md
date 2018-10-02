@@ -9,6 +9,7 @@ Joe Muriithi
 This is an application that you can store your passwords and generate new passwords for accounts.
 
 **BDD**
+
 ~The app can generate passwords for users.
 
 ~The app also stores passwords for the user.
@@ -29,7 +30,6 @@ I used python 3.6 in the making of this application.
 
 **License**
 
-License
 
 MIT License
 

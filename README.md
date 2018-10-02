@@ -8,6 +8,13 @@ Joe Muriithi
 
 This is an application that you can store your passwords and generate new passwords for accounts.
 
+**BDD**
+~The app can generate passwords for users.
+
+~The app also stores passwords for the user.
+
+~You can also find other users.
+
 **Set-up and installation**
 
 ~Clone my github repo
